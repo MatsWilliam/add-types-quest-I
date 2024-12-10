@@ -1,3 +1,9 @@
-export const numberOfColors = (d) => {};
+import {Dog} from "./types";
 
-export const commonColor = (d) => {};
+export const numberOfColors = (dogs:Dog[]) => {
+    
+};
+
+export const commonColor = (dogs:Dog[]) => {
+
+};

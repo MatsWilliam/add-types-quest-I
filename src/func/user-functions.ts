@@ -1,15 +1,16 @@
-export const averageAge = (allUsers) => {
-	let allAges = 0;
-	allUsers.forEach((u) => {
+import { User} from "./types";
+export const averageAge = (users: User[]) => {
+	let allAges: number = 0;
+	users.forEach((u ) => {
 		allAges += u.age;
 	});
-	return allAges / allUsers.length;
+	return allAges / users.length;
 };
 
-export const averageNumberOfHobbies = (allUsers) => {
+export const averageNumberOfHobbies = (users: User[]) => {
 	let AllHobbies = 0;
-	allUsers.forEach((u) => {
+	users.forEach((u ) => {
 		AllHobbies += u.hobby.length;
 	});
-	return AllHobbies / allUsers.length;
+	return AllHobbies / users.length;
 };

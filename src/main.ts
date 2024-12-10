@@ -8,16 +8,18 @@ import {
 	prettyPrintMonster,
 } from "./func/monster";
 import { commonColor, numberOfColors } from "./func/dog";
+import { User, Dog, Monster} from "./func/types";
 
 // Fixa så funktionen gör det den ska
-const printSum = (a, b) => {
-	console.log(0);
+const printSum = (a: number, b: number) => {
+	const sum: number = a+b;
+	console.log(sum);
 };
 
 printSum(1, 2);
 printSum(5, 12);
 
-const arr = [
+const users: User[] = [
 	{
 		name: "Stina",
 		hobby: ["läsa böcker"],
@@ -45,15 +47,15 @@ const arr = [
 	},
 ];
 
-console.log(`Vi har ${arr.length} stycken användare.`);
-console.log(`Medelåldern på alla användare är ${averageAge(arr)}`);
+console.log(`Vi har ${users.length} stycken användare.`);
+console.log(`Medelåldern på alla användare är ${averageAge(users)}`);
 console.log(
-	`Medelantalet hobbies per användare är ${averageNumberOfHobbies(arr)}`
+	`Medelantalet hobbies per användare är ${averageNumberOfHobbies(users)}`
 );
 // skriv ut "Den personen med flest hobbies har Y stycken hobbies". Byt ut Y mot ett funktionsanrop. Skapa den funktionen.
 // skriv ut "Den äldsta personen är A och den yngsta är B". Byt ut A och B mot funktionsanrop. Ska de två funktionerna
 
-const dogs = [
+const dogs: Dog[] = [
 	{ name: "Nisse", color: "brown" },
 	{ name: "Fiffi", color: "white" },
 	{ name: "Fluffe", color: "black" },
@@ -72,7 +74,7 @@ console.log(
 );
 // vi vill ha en pretty print som skriver ut alla färger som hundarna har och hur många hundar det finns av varje färg
 
-const monsters = [
+const monsters: Monster[] = [
 	{ name: "Florg", age: 1266, tentacles: 29, eyes: 666, hasWings: true },
 	{ name: "Smirch", age: 78, tentacles: 68, eyes: 2, hasWings: false },
 	{ name: "Gorge", age: 25, tentacles: 2, eyes: 2, hasWings: false },
