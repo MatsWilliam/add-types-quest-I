@@ -37,6 +37,13 @@ export const numberOfMonstersWithWings = (monsters:Monster[]) => {
 	return monstersWithWings;
 };
 
-export const getAllNoWingedMonster = (m) => {
-	return [];
+export const getAllNoWingedMonster = (monsters:Monster[]) => {
+	let monstersWithNoWings: string[] = [];
+	monsters.forEach((m) => {
+		if (m.hasWings===false) {
+			console.log(m.name);
+			monstersWithNoWings.push(m.name);
+		}
+	})
+	return `Dessa monster har inte vingar ${monstersWithNoWings}`;
 };
